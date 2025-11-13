@@ -29,7 +29,7 @@ function App() {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:5000/predict', formData);
+      const response = await axios.post('/api/predict', formData);
       setPrediction(response.data);
     } catch (error) {
       console.error('Error:', error);
